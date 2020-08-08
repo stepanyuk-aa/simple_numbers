@@ -7,5 +7,9 @@ def checker(num):
             is_simple = False
             break
 
-    if is_simple: print(num, " is simple")
+    if is_simple:
+        # print(num, " is simple")
+        return True
+    else:
+        return False
     # else: print(num, " is not simple")
