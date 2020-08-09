@@ -1,12 +1,17 @@
 from check import *
 from logs import *
 
-mS = mark_time()
-add_log("Start")
+add_header(); mS = mark_time()
+# add_log("Start")
+
 m1 = mark_time()
-for w in range(2,100000):
+for w in range(2,10000):
     if checker(w):
-        add_log(str(dif_time(m1, mark_time())) + "\t" + str(w))
+        add_log(
+            str(w) + "," +
+            dif_time(m1, mark_time()) + "," +
+            dif_time(mS, mark_time())
+        )
         m1 = mark_time()
 
-add_log(str(dif_time(mS, mark_time())) + "\t Stop")
+# add_log( + "\t Stop")
