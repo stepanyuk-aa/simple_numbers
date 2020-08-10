@@ -18,11 +18,11 @@ def add_log(text, time = False):
 
 def add_header():
     add_log(
-        "Simple numbers,Computation time, Work time"
+        "Simple numbers,Computation time,Work time"
     )
 
 def mark_time():
-    return datetime.now()\
+    return datetime.now()
 
 def dif_time(mark1, mark2):
     return str(mark2 - mark1)

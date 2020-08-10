@@ -1,3 +1,6 @@
+import pandas as pd
+import logs
+
 def checker(num):
     is_simple = True
     simple_num = []
@@ -13,3 +16,13 @@ def checker(num):
     else:
         return False
     # else: print(num, " is not simple")
+
+def get_last_num():
+    try:
+        df = pd.read_csv('logs.txt', ',')
+        return int(df.iloc[[-1]]['Simple numbers'])
+    except pd.errors.EmptyDataError:
+        print('file is empty')
+        logs.add_header();
+        return 2
+
